@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-go-rhtap-three-component-scenarios-qb8n
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-go-rhtap-three-component-scenarios-qb8n
+    app.kubernetes.io/part-of: mc-three-scenarios
+  name: devfile-go-rhtap-three-component-scenarios-qb8n
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: devfile-go-rhtap-three-component-scenarios-qb8n
+status:
+  loadBalancer: {}
